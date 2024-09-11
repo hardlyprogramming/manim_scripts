@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/Pete/test/media/videos/my_test/480p15/partial_movie_files/IntervalNotation/1185818338_416895592_223132457.mp4'
+file 'file:C:/Users/Pete/test/media/videos/my_test/480p15/partial_movie_files/IntervalNotation/624642324_3145453748_1627716808.mp4'
+file 'file:C:/Users/Pete/test/media/videos/my_test/480p15/partial_movie_files/IntervalNotation/624642324_956909511_1627716808.mp4'
+file 'file:C:/Users/Pete/test/media/videos/my_test/480p15/partial_movie_files/IntervalNotation/624642324_784179552_689300937.mp4'
