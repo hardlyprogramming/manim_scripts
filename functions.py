@@ -10,6 +10,13 @@ class Functions(Scene):
         function_with_input = MathTex("f(-5) = 3(-5)^2 - 1")
       # Asking question
         question = MathTex("Find\\quad f(-5)").shift(2*UP)
+      # Step 2 solve
+        f2 = MathTex("= 3(25) - 1").shift(0.55*RIGHT)
+      # Step 3 solve
+        f3 = MathTex("= 75 - 1").shift(1*DOWN, 0.25*RIGHT)
+      # Final Answer
+        answer = MathTex("= 74").shift(1*DOWN, 0.2*LEFT)
+
       # Isolates the "-5" from the question
         neg5 = question[0][6:8]
         neg5_final = Group(function_with_input[0][2:4],function_with_input[0][8:10])
@@ -35,6 +42,19 @@ class Functions(Scene):
       # Show replacement animation "-5" --> ( )
         self.play(ReplacementTransform(neg5.copy(), function_with_input[0][2:4]))
         self.play(ReplacementTransform(neg5.copy(), function_with_input[0][8:10]))
+        self.play(function_with_input.animate.shift(1*UP))
+        self.play(Circumscribe(function_with_input[0][7:12], time_width=500))
+        self.wait(2)
+        self.play(ReplacementTransform(function_with_input.copy(), f2))
+        self.wait(1)
+        self.play(Circumscribe(f2[0][1:6], time_width=500))
+        self.wait(1)
+        self.play(ReplacementTransform(f2.copy(), f3))
+        self.wait(2)
+        self.play(ReplacementTransform(f3,answer))
+        self.play(Circumscribe(answer[0][1:], run_time=4, color=GREEN))
+        self.play(Circumscribe(answer[0][1:], run_time=4, color=GREEN))
+        self.play(Circumscribe(answer[0][1:], run_time=4, color=GREEN))
 
 
 
